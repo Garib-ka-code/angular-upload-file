@@ -81,17 +81,17 @@ $scope.uploadFiles = function(file) {
           });
       }   
   };
-  
+  ```
   ###step 6 : Create PHP Script on server side to save file (Server Side Implementation)
 ```php
  <?php 
- // Directory where uploaded files are saved
- $dirname = "uploads/"; 
- // If uploading file
- if ($_FILES) {
-    //print_r($_FILES);
-    mkdir ($dirname, 0777, true);
-    move_uploaded_file($_FILES["file"]["tmp_name"],$dirname."/".$_FILES["file"]["name"]);
- }
-?>
+     // Directory where uploaded files are saved
+     $dirname = "uploads/"; 
+     // If uploading file
+     if ($_FILES) {
+        //print_r($_FILES);
+        mkdir ($dirname, 0777, true);
+        move_uploaded_file($_FILES["file"]["tmp_name"],$dirname."/".$_FILES["file"]["name"]);
+     }
+ ?>
   ```
