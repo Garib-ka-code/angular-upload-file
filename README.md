@@ -8,6 +8,7 @@ sudo cordova plugin add org.apache.cordova.file-transfer
 ###Step 2 : Add Javascript code
 
 //inject directives and services.
+```js
 var app = angular.module('myApp', ['ngFileUpload']);
 
 app.directive('fileInput', ['$parse', function($parse){
